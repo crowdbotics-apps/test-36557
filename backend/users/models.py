@@ -45,9 +45,9 @@ class User(AbstractUser):
     )
     product = models.OneToOneField(
         "home.Products",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="user_product",
     )
 
