@@ -9,7 +9,7 @@ class Products(models.Model):
     )
     mrp = models.FloatField()
     image = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
