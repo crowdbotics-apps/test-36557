@@ -9,13 +9,19 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0003_products_image'),
+        ("home", "0003_products_image"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='products',
-            name='seller',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='products_seller', to=settings.AUTH_USER_MODEL),
+            model_name="products",
+            name="seller",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="products_seller",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

@@ -43,6 +43,13 @@ class User(AbstractUser):
         blank=True,
         max_length=13,
     )
+    product = models.OneToOneField(
+        "home.Products",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="user_product",
+    )
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})

@@ -15,8 +15,8 @@ class Products(models.Model):
     )
     seller = models.OneToOneField(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="products_seller",
     )
