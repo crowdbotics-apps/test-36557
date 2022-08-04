@@ -13,3 +13,10 @@ class Products(models.Model):
         blank=True,
         max_length=256,
     )
+    seller = models.OneToOneField(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="products_seller",
+    )
